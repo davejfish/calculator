@@ -54,6 +54,7 @@ const buttonEqual = document.getElementById('equal');
 
 buttonAC.addEventListener('click', () => {
     arr = []
+    inputEl.value = null;
     console.log('arr has been cleared!')
     console.log('current arr is: ', arr)
 })
@@ -69,101 +70,69 @@ buttonJ.addEventListener('click', () => {
 })
 
 buttonDivide.addEventListener('click', () => {
-    inputEl.value = buttonDivide.value
-    arr.push(buttonDivide.value)
-    console.log('current arr is: ', arr)
+    console.log('divide button works')
 })
 
 buttonSeven.addEventListener('click', () => {
-    inputEl.value = buttonSeven.value;
-    arr.push(buttonSeven.value)
-    console.log('current arr is: ', arr)
+    console.log('seven button works')
 })
 
 buttonEight.addEventListener('click', () => {
-    inputEl.value = buttonEight.value;
-    arr.push(buttonEight.value);
-    console.log('current arr is: ', arr)
+    console.log('eight button works')
 })
 
 buttonNine.addEventListener('click', () => {
-    inputEl.value = buttonNine.value;
-    arr.push(buttonNine.value)
-    console.log('current arr is: ', arr)
+    console.log('nine button works')
 })
 
 buttonMulti.addEventListener('click', () => {
-    inputEl.value = buttonMulti.value;
-    arr.push(buttonMulti.value);
-    console.log('current arr is: ', arr)
+    console.log('multi button works')
 })
 
 buttonFour.addEventListener('click', () => {
-    inputEl.value = buttonFour.value;
-    arr.push(buttonFour.value);
-    console.log('current arr is: ', arr)
+    console.log('four button works')
 })
 
 buttonFive.addEventListener('click', () => {
-    inputEl.value = buttonFive.value;
-    arr.push(buttonFive.value);
-    console.log('current arr is: ', arr)
+    console.log('five button works')
 })
 
 buttonSix.addEventListener('click', () => {
-    inputEl.value = buttonSix.value;
-    arr.push(buttonSix.value);
-    console.log('current arr is: ', arr)
+    console.log('six button works')
 })
 
 buttonSubt.addEventListener('click', () => {
-    inputEl.value = buttonSubt.value;
-    arr.push(buttonSubt.value);
-    console.log('current arr is: ', arr)
+    console.log('subt button works')
 })
 
 buttonOne.addEventListener('click', () => {
-    inputEl.value = buttonOne.value;
-    arr.push(buttonOne.value);
-    console.log('current arr is: ', arr)
+    console.log('one button works')
 })
 
 buttonTwo.addEventListener('click', () => {
-    inputEl.value = buttonTwo.value;
-    arr.push(buttonTwo.value);
-    console.log('current arr is: ', arr)
+    console.log('two button works')
 })
 
 buttonThree.addEventListener('click', () => {
-    inputEl.value = buttonThree.value;
-    arr.push(buttonThree.value);
-    console.log('current arr is: ', arr)
+    console.log('three button works')
 })
 
 buttonPlus.addEventListener('click', () => {
-    inputEl.value = buttonPlus.value;
-    arr.push(buttonPlus.value);
-    console.log('current arr is: ', arr)
+    console.log('plus button works')
 })
 
 buttonPoint.addEventListener('click', () => {
-    inputEl.value = buttonPoint.value;
-    arr.push(buttonPoint.value);
-    console.log('current arr is: ', arr)
+    console.log('point button works')
 })
 
 buttonRei.addEventListener('click', () => {
-    inputEl.value = buttonRei.value;
-    arr.push(buttonRei.value);
-    console.log('current arr is: ', arr)
+    console.log('zero button works')
 })
 
 buttonDelete.addEventListener('click', () => {
     console.log('delete button works')
-    // code goes here
 })
 
 buttonEqual.addEventListener('click', () => {
     console.log('equal button works')
-    // code goes here
 })
