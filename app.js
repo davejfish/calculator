@@ -49,9 +49,15 @@ function numOrOperator(button) {
 
 // push input value, selected operator to array, change value of input
 function updateArr(button) {
-    arr.push(inputDisplay.value);
-    arr.push(button.value);
-    inputDisplay.value = button.value;
+    if (isNum(inputDisplay.value)) {
+        arr.push(inputDisplay.value);
+        arr.push(button.value);
+        inputDisplay.value = button.value;
+    } else {
+        arr.pop()
+        arr.push(button.value);
+        inputDisplay.value = button.value;
+    };
 } 
 
 
@@ -149,6 +155,12 @@ buttonRei.addEventListener('click', () => {
 
 buttonDelete.addEventListener('click', () => {
     console.log('delete button works')
+    const prevVal = inputDisplay.value;
+    
+    if (isNum(inputDisplay.value)) {
+        const newVal = prevVal.slice(0, -1);
+        inputDisplay.value = newVal;
+    }
 })
 
 buttonEqual.addEventListener('click', () => {
