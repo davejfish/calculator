@@ -69,91 +69,91 @@ buttonJ.addEventListener('click', () => {
 })
 
 buttonDivide.addEventListener('click', () => {
-    inputEl.textContent = buttonDivide.value
+    inputEl.value = buttonDivide.value
     arr.push(buttonDivide.value)
     console.log('current arr is: ', arr)
 })
 
 buttonSeven.addEventListener('click', () => {
-    inputEl.textContent = buttonSeven.value;
+    inputEl.value = buttonSeven.value;
     arr.push(buttonSeven.value)
     console.log('current arr is: ', arr)
 })
 
 buttonEight.addEventListener('click', () => {
-    inputEl.textContent = buttonEight.value;
+    inputEl.value = buttonEight.value;
     arr.push(buttonEight.value);
     console.log('current arr is: ', arr)
 })
 
 buttonNine.addEventListener('click', () => {
-    inputEl.textContent = buttonNine.value;
+    inputEl.value = buttonNine.value;
     arr.push(buttonNine.value)
     console.log('current arr is: ', arr)
 })
 
 buttonMulti.addEventListener('click', () => {
-    inputEl.textContent = buttonMulti.value;
+    inputEl.value = buttonMulti.value;
     arr.push(buttonMulti.value);
     console.log('current arr is: ', arr)
 })
 
 buttonFour.addEventListener('click', () => {
-    inputEl.textContent = buttonFour.value;
+    inputEl.value = buttonFour.value;
     arr.push(buttonFour.value);
     console.log('current arr is: ', arr)
 })
 
 buttonFive.addEventListener('click', () => {
-    inputEl.textContent = buttonFive.value;
+    inputEl.value = buttonFive.value;
     arr.push(buttonFive.value);
     console.log('current arr is: ', arr)
 })
 
 buttonSix.addEventListener('click', () => {
-    inputEl.textContent = buttonSix.value;
+    inputEl.value = buttonSix.value;
     arr.push(buttonSix.value);
     console.log('current arr is: ', arr)
 })
 
 buttonSubt.addEventListener('click', () => {
-    inputEl.textContent = buttonSubt.value;
+    inputEl.value = buttonSubt.value;
     arr.push(buttonSubt.value);
     console.log('current arr is: ', arr)
 })
 
 buttonOne.addEventListener('click', () => {
-    inputEl.textContent = buttonOne.value;
+    inputEl.value = buttonOne.value;
     arr.push(buttonOne.value);
     console.log('current arr is: ', arr)
 })
 
 buttonTwo.addEventListener('click', () => {
-    inputEl.textContent = buttonTwo.value;
+    inputEl.value = buttonTwo.value;
     arr.push(buttonTwo.value);
     console.log('current arr is: ', arr)
 })
 
 buttonThree.addEventListener('click', () => {
-    inputEl.textContent = buttonThree.value;
+    inputEl.value = buttonThree.value;
     arr.push(buttonThree.value);
     console.log('current arr is: ', arr)
 })
 
 buttonPlus.addEventListener('click', () => {
-    inputEl.textContent = buttonPlus.value;
+    inputEl.value = buttonPlus.value;
     arr.push(buttonPlus.value);
     console.log('current arr is: ', arr)
 })
 
 buttonPoint.addEventListener('click', () => {
-    inputEl.textContent = buttonPoint.value;
+    inputEl.value = buttonPoint.value;
     arr.push(buttonPoint.value);
     console.log('current arr is: ', arr)
 })
 
 buttonRei.addEventListener('click', () => {
-    inputEl.textContent = buttonRei.value;
+    inputEl.value = buttonRei.value;
     arr.push(buttonRei.value);
     console.log('current arr is: ', arr)
 })
