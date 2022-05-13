@@ -1,22 +1,9 @@
-// 'use strict'
+'use strict'
 
-// const buttonEl = document.getElementById('myButton')
-
-// buttonEl.addEventListener('click', () => {
-//     console.log(buttonEl.value)
-// })
-
-
-// const arr = ['(', 500, '*', 10, ')', '+', 37]
-
-// console.log(eval(arr.join('')))
-
-// const buttonNine = document.getElementById('nine')
-
-// buttonNine.addEventListener('click', () => {
-//     console.log('it worked');
-// })
-
+// returns True if number
+function isNum(val) {
+    return !isNaN(val)
+};
 
 // array for all inputs before adding
 let arr = [];
@@ -50,7 +37,23 @@ const buttonRei = document.getElementById('rei');
 const buttonDelete = document.getElementById('delete');
 const buttonEqual = document.getElementById('equal');
 
-// add values to the input
+
+// function for number buttons to determine whether number continues or not
+function numOrOperator(button) {
+    if ((isNum(inputDisplay.value)) || (inputDisplay.value === '.')) {
+        inputDisplay.value += button.value;
+    } else {
+        inputDisplay.value = button.value;
+    }
+} 
+
+// push input value, selected operator to array, change value of input
+function updateArr(button) {
+    arr.push(inputDisplay.value);
+    arr.push(button.value);
+    inputDisplay.value = button.value;
+} 
+
 
 buttonAC.addEventListener('click', () => {
     arr = []
@@ -71,62 +74,77 @@ buttonJ.addEventListener('click', () => {
 
 buttonDivide.addEventListener('click', () => {
     console.log('divide button works')
+    updateArr(buttonDivide)
 })
 
 buttonSeven.addEventListener('click', () => {
-    console.log('seven button works')
+    console.log('inputDisplay = ', inputDisplay.value)
+    numOrOperator(buttonSeven)
 })
 
 buttonEight.addEventListener('click', () => {
     console.log('eight button works')
+    numOrOperator(buttonEight)
 })
 
 buttonNine.addEventListener('click', () => {
     console.log('nine button works')
+    numOrOperator(buttonNine)
 })
 
 buttonMulti.addEventListener('click', () => {
     console.log('multi button works')
+    updateArr(buttonMulti)
 })
 
 buttonFour.addEventListener('click', () => {
     console.log('four button works')
+    numOrOperator(buttonFour)
 })
 
 buttonFive.addEventListener('click', () => {
     console.log('five button works')
+    numOrOperator(buttonFive)
 })
 
 buttonSix.addEventListener('click', () => {
     console.log('six button works')
+    numOrOperator(buttonSix)
 })
 
 buttonSubt.addEventListener('click', () => {
     console.log('subt button works')
+    updateArr(buttonSubt)
 })
 
 buttonOne.addEventListener('click', () => {
     console.log('one button works')
+    numOrOperator(buttonOne)
 })
 
 buttonTwo.addEventListener('click', () => {
     console.log('two button works')
+    numOrOperator(buttonTwo)
 })
 
 buttonThree.addEventListener('click', () => {
     console.log('three button works')
+    numOrOperator(buttonThree)
 })
 
 buttonPlus.addEventListener('click', () => {
     console.log('plus button works')
+    updateArr(buttonPlus)
 })
 
 buttonPoint.addEventListener('click', () => {
     console.log('point button works')
+    numOrOperator(buttonPoint)
 })
 
 buttonRei.addEventListener('click', () => {
     console.log('zero button works')
+    numOrOperator(buttonRei)
 })
 
 buttonDelete.addEventListener('click', () => {
@@ -134,5 +152,5 @@ buttonDelete.addEventListener('click', () => {
 })
 
 buttonEqual.addEventListener('click', () => {
-    console.log('equal button works')
+    console.log('current array: ', arr)
 })
