@@ -9,6 +9,124 @@ body html {
 
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.calc {
+    display: grid;
+    background-color: #284B63;
+    gap: 8px;
+    padding: 10px;
+    grid-template-areas: 
+        'AC i j divide'
+        'seven eight nine multi'
+        'four five six subt'
+        'one two three plus'
+        'point rei delete equal';
+}
+
+.inputDisplay {
+    width: 244px;
+    height: 35px;
+    background-color: #F4F9E9;
+}
+
+.button {
+    background-color: #F4F9E9;
+    color: #284B63;
+    text-align: center;
+    justify-content: center;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+
+.AC {
+    grid-area: AC;
+    background-color: #B4B8AB;
+}
+
+.i {
+    grid-area: i;
+    background-color: #B4B8AB;
+}
+
+.j {
+    grid-area: j;
+    background-color: #B4B8AB;
+}
+
+.divide {
+    grid-area: divide;
+    background-color: #B4B8AB;
+}
+
+.seven {
+    grid-area: seven;
+}
+
+.eight {
+    grid-area: eight;
+}
+
+.nine {
+    grid-area: nine;
+}
+
+.multi {
+    grid-area: multi;
+    background-color: #B4B8AB;
+}
+
+.four {
+    grid-area: four;
+}
+
+.five {
+    grid-area: five;
+}
+
+.six {
+    grid-area: six;
+}
+
+.subt {
+    grid-area: subt;
+    background-color: #B4B8AB;
+}
+
+.one {
+    grid-area: one;
+}
+
+.two {
+    grid-area: two;
+}
+
+.three {
+    grid-area: three;
+}
+
+.plus {
+    grid-area: plus;
+    background-color: #B4B8AB;
+}
+
+.dot {
+    grid-area: point;
+}
+
+.rei {
+    grid-area: rei;
+}
+
+.delete {
+    grid-area: delete;
+}
+
+.equal {
+    grid-area: equal;
+    background-color: #B4B8AB;
 }
