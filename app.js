@@ -32,47 +32,120 @@ const buttonRei = document.getElementById('rei');
 const buttonDelete = document.getElementById('delete');
 const buttonEqual = document.getElementById('equal');
 
-// to check for if displayed content is a number or not
-function isNum(val) {
-    return !isNaN(val)
-};
 
-// if the last item in arr is not a number, remove it and display the button value only in input
-// otherwise, add the button value to the end of the input
-function insertNum(button) {
-    // rebuild this
+// build calculator class
+class Calculator {
+    constructor(prevValTextElement, curValTextElement) {
+        this.curValTextElement = curValTextElement;
+        this.prevValTextElement = prevValTextElement;
+        this.clear()
+    }
+
+    clear() {
+        this.curVal = '';
+        this.prevVal = '';
+        this.operator = undefined;
+    }
+
+    isNum(val) {
+        return!isNaN(val);
+    }
+
+    appendNum(number) {
+        if (number === '.' && this.curVal.includes('.')) return;
+        this.curVal = this.curVal.toString() + number.toString();
+    }
+
+    getDisplayNumber(number) {
+        const stringNumber = number.toString()
+        const integerDigits = parseFloat(stringNumber.split('.')[0])
+        const decimalDigits = stringNumber.split('.')[1]
+        let integerDisplay
+        if (isNaN(integerDigits)) {
+        integerDisplay = ''
+        } else {
+        integerDisplay = integerDigits.toLocaleString('en', { maximumFractionDigits: 0 })
+        }
+        if (decimalDigits != null) {
+        return `${integerDisplay}.${decimalDigits}`
+        } else {
+        return integerDisplay
+    }
+    }
+
+    changeDisplay() {
+        this.curValTextElement.innerText =
+            this.getDisplayNumber(this.curVal)
+        if (this.operator != null) {
+        this.prevValTextElement.innerText =
+            `${this.getDisplayNumber(this.prevVal)} ${this.operator}`
+        } else {
+        this.prevValTextElement.innerText = ''
+        }
+  }
+
+    findOperator(operator) {
+        if (this.curVal === '') return
+        if (this.curVal !== '') {
+            this.calculation()
+        } 
+        this.operator = operator;
+        this.prevVal = this.curVal;
+        this.curVal = '';
+    }
+
+    calculation() {
+        let result;
+        const prev = parseFloat(this.prevVal);
+        const cur = parseFloat(this.curVal);
+
+        if (isNaN(prev) || isNaN(cur)) return;
+
+        switch (this.operator) {
+            case '+':
+                result = prev + cur;
+                break;
+            
+            case '-':
+                result = prev - cur;
+                break;
+
+            case '*':
+                result = prev * cur;
+                break;    
+
+            case '/':
+                result = prev / cur;
+                break;
+                
+            default:
+                return
+        }
+        this.curVal = result;
+        this.operator = undefined;
+        this.prevVal = '';
+    }
+
+    delete() {
+        this.curVal = this.curVal.toString().slice(0, -1)
+    }
+
 }
 
-function addIt(button) {
-    //rebuild this
-}
+const calc = new Calculator('', '');
 
-function subIt(button) {
-    //
-}
-
-function divideIt(button) {
-    //
-}
-
-function multiIt(button) {
-    //
-}
 
 buttonAC.addEventListener('click', () => {
-    arr = []
-    inputEl.value = null;
-    console.log('arr has been cleared!')
-    console.log('current arr is: ', arr)
+    calc.clear()
+    calc.changeDisplay()
 })
 
 buttonI.addEventListener('click', () => {
-    console.log('current array: ', arr)
-    // add code here
+    //
 })
 
 buttonJ.addEventListener('click', () => {
-    addIt(buttonJ)
+    //
 })
 
 buttonDivide.addEventListener('click', () => {
@@ -80,7 +153,8 @@ buttonDivide.addEventListener('click', () => {
 })
 
 buttonSeven.addEventListener('click', () => {
-    insertNum(buttonSeven)
+    calc.appendNum(buttonSeven.innerText)
+    calc.changeDisplay()
 })
 
 buttonEight.addEventListener('click', () => {
@@ -136,18 +210,9 @@ buttonRei.addEventListener('click', () => {
 })
 
 buttonDelete.addEventListener('click', () => {
-    const prevVal = inputDisplay.value;
-    
-    if (isNum(inputDisplay.value)) {
-        const newVal = prevVal.slice(0, -1);
-        inputDisplay.value = newVal;
-    }
-})
+
+})    
 
 buttonEqual.addEventListener('click', () => {
-    if (isNum(inputDisplay.value)) {
-        arr.push(Number(inputDisplay.value))
-        inputDisplay.value = 0
-    }
-
+    
 })
