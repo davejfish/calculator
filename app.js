@@ -13,7 +13,8 @@ class Calculator {
     clear() {
         this.curVal = '';
         this.prevVal = '';
-        this.operator = undefined;
+        this.operator = undefined;      
+        
         console.log(`current value = ${this.curVal}`)
         console.log(`previous value = ${this.prevVal}`)
         console.log(`operator = ${this.operator}`)
