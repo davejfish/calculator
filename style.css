@@ -45,13 +45,13 @@ body {
 
 .AC {
     grid-area: AC;
-    background-color: #B4B8AB;
+    background-color: #F9FFFF;
 }
 
 .i {
     grid-area: i;
     background-color: #B4B8AB;
-}
+} 
 
 .j {
     grid-area: j;
@@ -128,5 +128,5 @@ body {
 
 .equal {
     grid-area: equal;
-    background-color: #B4B8AB;
+    background-color: #F9FFFF;
 }
