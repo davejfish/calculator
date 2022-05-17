@@ -206,4 +206,5 @@ deleteButton.addEventListener('click', () => {
 acButton.addEventListener('click', () => {
     // console.log('all clear button works')
     calc.clear()
+    calc.changeDisplay();
 })
